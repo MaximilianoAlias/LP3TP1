@@ -96,13 +96,13 @@ namespace LP3TP1
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// Control volverAlMenuInicio.
+        /// Control btnVolverMenuInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink volverAlMenuInicio;
+        protected global::System.Web.UI.WebControls.Button btnVolverMenuInicio;
 
         /// <summary>
         /// Control SqlDataInsertar.

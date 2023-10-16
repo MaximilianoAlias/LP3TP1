@@ -67,5 +67,7 @@ namespace LP3TP1
         {
             Response.Redirect("MenuInicio.aspx");
         }
+
+
     }
 }

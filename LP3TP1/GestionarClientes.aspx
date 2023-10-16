@@ -31,9 +31,8 @@
                 </Columns>
             </asp:GridView>
             <br />
-
             <br />
-            <asp:HyperLink ID="volverAlMenuInicio" runat="server" NavigateUrl="~/MenuInicio.aspx">Volver al Inicio</asp:HyperLink>            
+            <asp:Button ID="btnVolverMenuInicio" runat="server" Text="Volver al Inicio" OnClick="btnVolverMenuInicio_Click" />
             <asp:SqlDataSource ID="SqlDataInsertar" runat="server" ConnectionString="<%$ ConnectionStrings:conexion %>" DeleteCommand="DELETE FROM [Clientes] WHERE [id] = @id" InsertCommand="INSERT INTO [Clientes] ([apellido], [nombre]) VALUES (@apellido, @nombre)" SelectCommand="SELECT * FROM [Clientes]" UpdateCommand="UPDATE [Clientes] SET [apellido] = @apellido, [nombre] = @nombre WHERE [id] = @id">
                 <DeleteParameters>
                     <asp:Parameter Name="id" Type="Int32"></asp:Parameter>
