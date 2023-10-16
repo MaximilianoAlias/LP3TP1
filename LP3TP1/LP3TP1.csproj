@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GestionarClientes.aspx" />
+    <Content Include="GestionarCobranzas.aspx" />
+    <Content Include="MenuInicio.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +79,20 @@
     </Compile>
     <Compile Include="GestionarClientes.aspx.designer.cs">
       <DependentUpon>GestionarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarCobranzas.aspx.cs">
+      <DependentUpon>GestionarCobranzas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarCobranzas.aspx.designer.cs">
+      <DependentUpon>GestionarCobranzas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuInicio.aspx.cs">
+      <DependentUpon>MenuInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuInicio.aspx.designer.cs">
+      <DependentUpon>MenuInicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
