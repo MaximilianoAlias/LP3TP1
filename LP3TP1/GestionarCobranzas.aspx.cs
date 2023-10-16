@@ -11,8 +11,30 @@ namespace LP3TP1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                // Cargar datos iniciales en el GridView
+                CargarDatos();
+            }
 
         }
+
+        protected void TextBoxFecha_TextChanged(object sender, EventArgs e)
+        {
+            // Al cambiar la fecha, recargar los datos
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            // Recargar el GridView
+            GridViewCobranzas.DataBind();
+        }
+
+        /*
+         * 
+         
+         */
 
         protected void agregarCobranza_Click(object sender, EventArgs e)
         {
