@@ -18,18 +18,28 @@
             <asp:Label ID="Label3" runat="server" Text="que posee cada cliente y filtrarlas por las fechas"></asp:Label>
             <br />
             <br />
+            <asp:Label ID="Label5" runat="server" Text="Ingrese la fecha: "></asp:Label>
+            <br />
             <asp:TextBox ID="txbFecha" runat="server" TextMode="Date"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label6" runat="server" Text="Ingrese el monto: "></asp:Label><br />
             <asp:TextBox ID="txbMonto" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label7" runat="server" Text="Seleccione el cliente: "></asp:Label>
             <asp:DropDownList ID="DDLForanea" runat="server" DataTextField="apellido" DataValueField="id" DataSourceID="SqlDropDownList">
-                <asp:ListItem Text="-- Seleccione --" Value="" />
             </asp:DropDownList>
-            <br /><br />
-            <asp:Button ID="agregarCobranza" runat="server" Text="Agregar" OnClick="agregarCobranza_Click" />
-            <asp:Button ID="btnCancelarCliente" runat="server" Text="Cancelar Registro" OnClick="btnCancelarCliente_Click" />
-            <asp:Button ID="btnVolverMenuInicio" runat="server" Text="Volver al Inicio" OnClick="btnVolverMenuInicio_Click" />
 
             <br /><br />
-            <asp:GridView ID="GridView1" runat="server" DataSourceID="sqlCobranzas" AutoGenerateColumns="False" DataKeyNames="id">
+            <asp:Button ID="agregarCobranza" runat="server" Text="Agregar Registro" OnClick="agregarCobranza_Click" />
+            <asp:Button ID="btnCancelarCliente" runat="server" Text="Cancelar Registro" OnClick="btnCancelarCliente_Click" />
+
+            <br /><br />
+            <asp:Label ID="lblResultado" runat="server" Text=""></asp:Label>
+            <br /><br />
+
+            <asp:GridView ID="GridView1" runat="server" DataSourceID="sqlCobranzas" AutoGenerateColumns="False" DataKeyNames="id" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" InsertVisible="False" SortExpression="id"></asp:BoundField>
                     <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha"></asp:BoundField>
@@ -37,10 +47,11 @@
                     <asp:BoundField DataField="apellido" HeaderText="apellido" SortExpression="apellido"></asp:BoundField>
                     <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre"></asp:BoundField>
                     <asp:BoundField DataField="idClienteForanea" HeaderText="idClienteForanea" SortExpression="idClienteForanea"></asp:BoundField>
-                    <asp:CommandField CancelImageUrl="~/icons/iconocancelar.png" DeleteImageUrl="~/icons/iconoeliminar.png" EditImageUrl="~/icons/iconoeditar.png" NewImageUrl="~/icons/iconoagregar.png" SelectImageUrl="~/icons/iconoseleccionar.png" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateImageUrl="~/icons/iconoactualizar.png" ButtonType="Image" HeaderText="Opciones" ControlStyle-Width="20"></asp:CommandField>
+                    <asp:CommandField CancelImageUrl="~/icons/iconocancelar.png" DeleteImageUrl="~/icons/iconoeliminar.png" EditImageUrl="~/icons/iconoeditar.png" NewImageUrl="~/icons/iconoagregar.png" SelectImageUrl="~/icons/iconoseleccionar.png" ShowDeleteButton="True"  ShowSelectButton="True" UpdateImageUrl="~/icons/iconoactualizar.png" ButtonType="Image" HeaderText="Opciones" ControlStyle-Width="20"></asp:CommandField>
                 </Columns>
             </asp:GridView>
             <br /><br />
+
             <asp:Label ID="Label4" runat="server" Text="Filtrar por Mes y Año: "></asp:Label>
             <asp:TextBox ID="TextBoxFecha" runat="server" Type="date" AutoPostBack="true"></asp:TextBox>
 
@@ -50,6 +61,9 @@
                     <asp:BoundField DataField="TotalCobranzas" HeaderText="Total a Cobrar" />
                 </Columns>
             </asp:GridView>
+            <br /><br />
+
+            <asp:Button ID="btnVolverMenuInicio" runat="server" Text="Volver al Inicio" OnClick="btnVolverMenuInicio_Click" />
 
             <asp:SqlDataSource ID="SqlDataSourceCobranzas" runat="server" ConnectionString="<%$ ConnectionStrings:conexion %>"
                 SelectCommand="SELECT C.idClienteForanea, 

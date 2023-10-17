@@ -87,6 +87,15 @@ namespace LP3TP1
         protected global::System.Web.UI.WebControls.Button btnCancelarCliente;
 
         /// <summary>
+        /// Control lblResultado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultado;
+
+        /// <summary>
         /// Control GridView1.
         /// </summary>
         /// <remarks>

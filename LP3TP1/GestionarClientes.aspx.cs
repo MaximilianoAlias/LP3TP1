@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Services.Description;
@@ -23,6 +24,7 @@ namespace LP3TP1
             // Verifica si los campos están vacíos
             if (string.IsNullOrWhiteSpace(nombreCliente) || string.IsNullOrWhiteSpace(apellidoCliente))
             {
+
                 // Muestra una advertencia si uno o ambos campos están vacíos
                 string script = "alert('Por favor, completa todos los campos.');";
                 ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
@@ -37,6 +39,11 @@ namespace LP3TP1
 
                 if (resultado != 0)
                 {
+                    StreamWriter stw = new StreamWriter($"{Server.MapPath(".")}/CreacionDeClientes.txt", true);
+                    stw.WriteLine("Se ha creado un nuevo cliente. Fecha y hora: " + DateTime.Now);
+                    stw.Close();
+                    lblResultado.Text = $"Se ha registrado un movimiento en la base de datos - tabla de clientes, block de notas creado en {Server.MapPath(".")}.";
+
                     // Éxito en la inserción
                     string successScript = "alert('Cliente registrado correctamente.');";
                     ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlSuccessScript", successScript, true);

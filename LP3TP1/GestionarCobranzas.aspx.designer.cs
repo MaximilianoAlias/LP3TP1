@@ -51,6 +51,15 @@ namespace LP3TP1
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
+        /// Control Label5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
         /// Control txbFecha.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,15 @@ namespace LP3TP1
         protected global::System.Web.UI.WebControls.TextBox txbFecha;
 
         /// <summary>
+        /// Control Label6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
         /// Control txbMonto.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace LP3TP1
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbMonto;
+
+        /// <summary>
+        /// Control Label7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
         /// Control DDLForanea.
@@ -96,13 +123,13 @@ namespace LP3TP1
         protected global::System.Web.UI.WebControls.Button btnCancelarCliente;
 
         /// <summary>
-        /// Control btnVolverMenuInicio.
+        /// Control lblResultado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVolverMenuInicio;
+        protected global::System.Web.UI.WebControls.Label lblResultado;
 
         /// <summary>
         /// Control GridView1.
@@ -139,6 +166,15 @@ namespace LP3TP1
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewCobranzas;
+
+        /// <summary>
+        /// Control btnVolverMenuInicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVolverMenuInicio;
 
         /// <summary>
         /// Control SqlDataSourceCobranzas.

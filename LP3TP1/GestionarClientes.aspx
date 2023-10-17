@@ -22,6 +22,9 @@
             <asp:Button ID="btnCancelarCliente" runat="server" Text="Cancelar Registro" OnClick="btnCancelarCliente_Click" />
             <br />
             <br />
+            <asp:Label ID="lblResultado" runat="server" Text=""></asp:Label>
+            <br />
+            <br />
             <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataInsertar" AutoGenerateColumns="False" DataKeyNames="id">
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="Id Cliente" ReadOnly="True" InsertVisible="False" SortExpression="id"></asp:BoundField>

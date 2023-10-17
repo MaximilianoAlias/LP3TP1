@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -62,8 +63,14 @@ namespace LP3TP1
 
                 if (resultado != 0)
                 {
+                    StreamWriter stw = new StreamWriter($"{Server.MapPath(".")}/RegistroDeCobranzas.txt", true);
+                    stw.WriteLine("Se ha creado un nuevo cliente. Fecha y hora: " + DateTime.Now);
+                    stw.Close();
+                    lblResultado.Text = $"Se ha registrado un movimiento en la base de datos - tabla de cobranzas," +
+                        $" block de notas creado en {Server.MapPath(".")}.";
+
                     // Éxito en la inserción
-                    string successScript = "alert('Cliente registrado correctamente.');";
+                    string successScript = "alert('Cobranza registrada correctamente.');";
                     ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlSuccessScript", successScript, true);
                     limpiarCasillas();
                 }
@@ -88,9 +95,38 @@ namespace LP3TP1
             limpiarCasillas();
         }
 
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            sqlCobranzas.Update();
+        }
+
+
         protected void btnVolverMenuInicio_Click(object sender, EventArgs e)
         {
             Response.Redirect("MenuInicio.aspx");
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtener el valor de la celda para la fecha
+            string fechaString = GridView1.SelectedRow.Cells[1].Text;
+
+            // Convertir la cadena a un objeto DateTime = parsearla
+            if (DateTime.TryParse(fechaString, out DateTime fecha))
+            {
+                // Formatear la fecha según sea necesario
+                txbFecha.Text = fecha.ToString("yyyy-MM-dd");
+            }
+            else
+            {
+                // en el caso en que la conversión no sea exitosa
+                // establezco un valor predeterminado o mostrar un mensaje de error
+                txbFecha.Text = "Formato de fecha no válido";
+            }
+
+            // Obtener el valor de otras celdas
+            txbMonto.Text = GridView1.SelectedRow.Cells[2].Text;
+            DDLForanea.SelectedValue = GridView1.SelectedRow.Cells[5].Text;
         }
     }
 }
