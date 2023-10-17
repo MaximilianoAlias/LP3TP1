@@ -37,6 +37,7 @@
                     <asp:BoundField DataField="apellido" HeaderText="apellido" SortExpression="apellido"></asp:BoundField>
                     <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre"></asp:BoundField>
                     <asp:BoundField DataField="idClienteForanea" HeaderText="idClienteForanea" SortExpression="idClienteForanea"></asp:BoundField>
+                    <asp:CommandField CancelImageUrl="~/icons/iconocancelar.png" DeleteImageUrl="~/icons/iconoeliminar.png" EditImageUrl="~/icons/iconoeditar.png" NewImageUrl="~/icons/iconoagregar.png" SelectImageUrl="~/icons/iconoseleccionar.png" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" UpdateImageUrl="~/icons/iconoactualizar.png" ButtonType="Image" HeaderText="Opciones" ControlStyle-Width="20"></asp:CommandField>
                 </Columns>
             </asp:GridView>
             <br /><br />

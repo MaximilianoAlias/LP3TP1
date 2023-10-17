@@ -69,6 +69,14 @@
   <ItemGroup>
     <Content Include="GestionarClientes.aspx" />
     <Content Include="GestionarCobranzas.aspx" />
+    <Content Include="icons\iconoaceptar.png" />
+    <Content Include="icons\iconoactualizar.png" />
+    <Content Include="icons\iconoagregar.png" />
+    <Content Include="icons\iconocancelar.png" />
+    <Content Include="icons\iconoeditar.png" />
+    <Content Include="icons\iconoeliminar.png" />
+    <Content Include="icons\icononuevo.png" />
+    <Content Include="icons\iconoseleccionar.png" />
     <Content Include="MenuInicio.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
