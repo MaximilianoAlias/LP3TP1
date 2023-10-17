@@ -52,7 +52,7 @@
             </asp:GridView>
             <br /><br />
 
-            <asp:Label ID="Label4" runat="server" Text="Filtrar por Mes y Año: "></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Ingrese fecha para Filtrar por Mes y Año y ver la tabla: "></asp:Label>
             <asp:TextBox ID="TextBoxFecha" runat="server" Type="date" AutoPostBack="true"></asp:TextBox>
 
             <asp:GridView ID="GridViewCobranzas" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceCobranzas">
